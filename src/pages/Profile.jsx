@@ -77,6 +77,8 @@ const Profile = () => {
     }))
   }
 
+  const onEdit = (id) => navigate(`/edit-listing/${id}`)
+
   const onDelete = async (listingId) => {
       if(window.confirm('are you sure you want to delete ?')){
         await deleteDoc(doc(db,'listings',listingId))
@@ -138,6 +140,7 @@ const Profile = () => {
               listing={listing.data} 
               id={listing.id}
               onDelete={()=>onDelete(listing.id)}
+              onEdit={()=>onEdit(listing.id)}
               /> 
             ))}
           </ul>
