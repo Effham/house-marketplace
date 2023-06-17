@@ -404,7 +404,8 @@ const CreateListing = () => {
                 onChange={onMutate}
                 min='50'
                 max='750000000'
-                required={offer}
+                required
+
               />
             </>
           )}
